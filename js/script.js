@@ -1,20 +1,21 @@
- 
-const routeControl = () => {
-   let hashList = document.querySelectorAll("main > section");
-    hashList.forEach( (eachHash) => {
+ // ==================== Roteador SPA (Issue #1) ====================
+// Função principal que controla qual seção da página é exibida.
+function routeControl() {
+    let hashList = document.querySelectorAll("main > section");
+    hashList.forEach((eachHash) => {
         eachHash.style.display = 'none';
     });
     const hash = window.location.hash || "#home";
     let hashFixed = document.querySelector(hash);
-    if (hashFixed == null ) {
-        hashFixed = document.getElementById('home')
-        hashFixed.style.display = 'block'
-    } else{
-        hashFixed.style.display = 'block'
+    if (hashFixed == null) {
+        hashFixed = document.getElementById('home');
+        hashFixed.style.display = 'block';
+    } else {
+        hashFixed.style.display = 'block';
     }
-    let removeLinks = document.querySelectorAll("header > nav > ul > li > a")
+    let removeLinks = document.querySelectorAll("header > nav > ul > li > a");
     removeLinks.forEach((eachLinks) => {
-        eachLinks.classList.remove('active')
+        eachLinks.classList.remove('active');
         if (eachLinks.hash == hash) {
             eachLinks.classList.add('active');
         };
