@@ -23,6 +23,11 @@ function routeControl() {
 }
 document.addEventListener("DOMContentLoaded", routeControl)
 window.addEventListener( "hashchange", routeControl);
+
+// ==================== Máscaras (Issue #2) ====================
+// TODO: Adicionar máscara para CPF
+// TODO: Adicionar máscara para CEP
+
 // ==================== Menu Mobile ====================
 function toggleMenu() {
     const menu = document.getElementById('navMenu');
