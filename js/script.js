@@ -24,10 +24,6 @@ function routeControl() {
 document.addEventListener("DOMContentLoaded", routeControl)
 window.addEventListener( "hashchange", routeControl);
 
-// ==================== Máscaras (Issue #2) ====================
-// TODO: Adicionar máscara para CPF
-// TODO: Adicionar máscara para CEP
-
 // ==================== Menu Mobile ====================
 function toggleMenu() {
     const menu = document.getElementById('navMenu');
@@ -56,10 +52,16 @@ function handleSubmit(event) {
 
     const nome = form.nome.value.trim();
     const email = form.email.value.trim();
-
+    const cpf = form.cpf.value.trim();
+    const telefone = form.telefone.value.trim();
+    const nascimento = form.nascimento.value.trim();
+    const endereco = form.endereco.value.trim();
+    const cep = form.cep.value.trim();
+    const cidade = form.cidade.value.trim();
+    const estado = form.estado.value.trim();
     // Verifica campos obrigatórios
-    if (!nome || !email) {
-        alert('Por favor, preencha os campos Nome e Email.');
+    if (!nome || !email || !cpf || !telefone || !nascimento || !endereco || !cep || !cidade || !estado) {
+        alert('Por favor, preencha os campos obrigatórios. (*)');
         return;
     }
 
@@ -67,8 +69,13 @@ function handleSubmit(event) {
     const formData = {
         nome,
         email,
-        telefone: form.telefone.value.trim(),
-        idade: form.idade.value.trim(),
+        cpf,
+        telefone,
+        nascimento,
+        endereco,
+        cep,
+        cidade,
+        estado,
         disponibilidade: form.disponibilidade.value.trim(),
         areaInteresse: form['area-interesse'].value.trim(),
         experiencia: form.experiencia.value.trim(),
@@ -109,14 +116,19 @@ function exibirVoluntarios() {
     }
 
     let html = '<table border="1" cellpadding="5" cellspacing="0">';
-    html += '<tr><th>Nome</th><th>Email</th><th>Telefone</th><th>Idade</th><th>Disponibilidade</th><th>Área de Interesse</th><th>Data Cadastro</th></tr>';
+    html += '<tr><th>Nome</th><th>Email</th><th>cpf</th><th>telefone</th><th>nascimento</th><th>endereco</th><th>cep</th><th>cidade</th><th>estado</th><th>Disponibilidade</th><th>Área de Interesse</th><th>Data Cadastro</th></tr>';
 
     voluntarios.forEach(v => {
         html += `<tr>
             <td>${v.nome}</td>
             <td>${v.email}</td>
+            <td>${v.cpf}</td>
             <td>${v.telefone}</td>
-            <td>${v.idade}</td>
+            <td>${v.nascimento}</td>
+            <td>${v.endereco}</td>
+            <td>${v.cep}</td>
+            <td>${v.cidade}</td>
+            <td>${v.estado}</td>
             <td>${v.disponibilidade}</td>
             <td>${v.areaInteresse}</td>
             <td>${v.dataCadastro}</td>
@@ -153,7 +165,26 @@ document.addEventListener('DOMContentLoaded', () => {
     exibirVoluntarios();
 });
 
-// ==================== Máscara de Telefone ====================
+// ==================== Máscaras (Issue #2) ====================
+
+//===================== CPF =============================
+const cpfInput = document.getElementById('cpf');
+if (cpfInput) {
+    cpfInput.addEventListener('input', (e) => {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 11) value = value.slice(0, 11);
+
+        if (value.length > 9) { 
+           value = value.slice(0, 3) + '.' + value.slice(3, 6) + '.' + value.slice(6, 9) + '-' + value.slice(9, 11); 
+        } else if (value.length > 6) { value = value.slice(0, 3) + '.' + value.slice(3, 6) + '.' + value.slice(6);
+        } else if (value.length > 3) { value = value.slice(0, 3) + '.' + value.slice(3);
+        }
+
+        e.target.value = value;
+    });
+};
+
+//==================== Telefone ===========================
 const telefoneInput = document.getElementById('telefone');
 if (telefoneInput) {
     telefoneInput.addEventListener('input', function(e) {
@@ -170,7 +201,24 @@ if (telefoneInput) {
 
         e.target.value = value;
     });
-}
+};
+
+//===================== CEP ==========================
+const cepInput = document.getElementById('cep');
+    if (cepInput) {
+        cepInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 8) value = value.slice(0, 8);
+
+            if (value.length > 5) {
+            value = value.slice(0, 5) + '-' + value.slice(5);
+            
+            }
+        e.target.value = value;
+    });
+
+};
 
 // ==================== Listener do Formulário ====================
+
 document.getElementById('volunteerForm').addEventListener('submit', handleSubmit);
