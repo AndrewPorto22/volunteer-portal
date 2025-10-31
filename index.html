@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+        <header>
+        <nav>
+            <div class="logo">💙 Voluntários</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="navMenu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#projetos" class="active">Projetos</a></li>
+                <li><a href="#cadastro">Seja Voluntário</a></li>
+            </ul>
+
+        </header>
+            <main>   
+                    <!--Home-->
+                    <section id="home">
+                        <!-- Hero Section -->
+                            <section class="hero">
+                                <div class="hero-content">
+                                    <h1>Transforme Vidas com Voluntariado</h1>
+                                    <p>Somos uma organização dedicada à inclusão social e ao atendimento de famílias. Junte-se a nós e faça a diferença!</p>
+                                    <a href="cadastro.html" class="btn-primary">Quero Ser Voluntário</a>
+                                </div>
+                            </section>
+                        <!-- About the project-->
+                        <section class="about">
+                            <h2>Como Funciona</h2>
+                            <p>Nossos projetos de voluntariado conectam pessoas dispostas a ajudar com famílias e comunidades que precisam de apoio. Cada projeto é planejado para atender necessidades específicas, seja em educação, saúde, inclusão social ou atividades culturais.</p>
+
+                            <h2>Para Que Serve</h2>
+                            <p>O objetivo dos nossos projetos é promover a inclusão social, gerar oportunidades e criar um impacto positivo na vida de quem mais precisa. Além disso, incentivamos a participação da comunidade e fortalecemos os vínculos entre voluntários e beneficiários.</p>
+
+                            <div class="impact-cards">
+                                <div class="card">
+                                    <div class="card-icon">📚</div>
+                                    <h3>Educação</h3>
+                                    <p>Projetos que oferecem suporte escolar, reforço e capacitação para crianças e adultos.</p>
+                                </div>
+                                <div class="card">
+                                    <div class="card-icon">🏥</div>
+                                    <h3>Saúde</h3>
+                                    <p>Campanhas de conscientização, atendimento básico e apoio a pessoas em vulnerabilidade.</p>
+                                </div>
+                                <div class="card">
+                                    <div class="card-icon">🎨</div>
+                                    <h3>Cultura e Inclusão</h3>
+                                    <p>Atividades culturais e sociais que promovem integração, autoestima e cidadania.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                    <!--Projects-->
+                    <section id="projetos">
+
+                    <!--Hero Section-->
+                    <section class="hero">
+                        <div class="hero-content">
+                            <h1>Nossos Projetos de Voluntariado</h1>
+                            <p>Descubra como nossas ações transformam vidas e como você pode fazer parte dessa corrente do bem.</p>
+                        </div>
+                    </section>
+                    <!--Call to Action-->
+                    <section class="cta">
+                        <div class="cta-content">
+                            <h2>Participe dos Nossos Projetos</h2>
+                            <p>Seja voluntário e faça parte dessa transformação!</p>
+                            <div class="cta-buttons">
+                                <a href="cadastro.html" class="btn-primary">Cadastre-se</a>
+                                <a href="index.html" class="btn-secondary">Voltar ao Início</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--Contato-->
+                    <section class="contact">
+                        <h2>Fale Conosco</h2>
+                        <address>
+                            <p>📍 <strong>Endereço:</strong> Passagem Bingo, 123 - Bom Clima, São Paulo/SP</p>
+                            <p>📞 <strong>Telefone:</strong> (11) 99999-9999</p>
+                            <p>✉️ <strong>E-mail:</strong> contato@organizacaovoluntario.org</p>
+                        </address>
+                    </section>
+
+                    </section>
+                    <!--Register-->
+                    <section id="cadastro">
+                
+                    <section class="hero hero-cadastro">
+                        <div class="hero-content">
+                            <h1>Cadastre-se como Voluntário</h1>
+                            <p>Junte-se a nós e faça a diferença na vida de muitas pessoas através do voluntariado.</p>
+                        </div>
+                    </section>
+
+                    <!--Formulário de Cadastro-->
+
+                        <section class="signup-section">
+                            <h2>Cadastro de Voluntários</h2>
+                            <div class="success-message" id="successMessage">
+                                ✅ Cadastro realizado com sucesso! Entraremos em contato em breve.
+                            </div>
+                            <form id="volunteerForm" onsubmit="handleSubmit(event)">
+                                <!--Dados Pessoais-->
+                                <fieldset>
+                                    <legend>Dados Pessoais</legend>
+                                    <div class="form-group">
+                                        <label for="nome">Nome Completo *</label>
+                                        <input type="text" id="nome" name="nome" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">E-mail *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cpf">CPF</label>
+                                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" minlength="11" maxlength="14" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telefone">Telefone *</label>
+                                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 4002-8922" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nascimento">Data de Nascimento *</label>
+                                        <input type="date" id="nascimento" name="nascimento" min="16" max="100" required>
+                                    </div>
+                                </fieldset>
+                                <!--Endereço-->
+                                <fieldset>
+                                    <legend>Endereço</legend>
+                                    <div class="form-group">
+                                        <label for="Endereço">Endereço</label>
+                                        <input type="text" id="endereco" name="endereço" autocomplete="street-address" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cep">CEP</label>
+                                        <input type="text" id="cep" name="cep" autocomplete="postal-code" placeholder="000000-00" maxlength="9" required>
+                                        <label for="Cidade">Cidade</label>
+                                        <input type="text" id="cidade" name="cidade" autocomplete="address-level2" required>
+                                        <label for="Estado">Estado</label>
+                                        <input type="text" id="estado" name="estado" autocomplete="address-level1" required>
+                                    </div>
+                                    <legend>Disponibilidade</legend>
+                                    <div class="form-group">
+                                        <label for="disponibilidade">Quando você pode ajudar? *</label>
+                                        <select id="disponibilidade" name="disponibilidade" required>
+                                            <option value="">Selecione...</option>
+                                            <option value="fins-de-semana">Fins de semana</option>
+                                            <option value="dias-uteis">Dias úteis</option>
+                                            <option value="flexivel">Horário flexível</option>
+                                            <option value="pontual">Ações pontuais</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="area-interesse">Área de Interesse *</label>
+                                        <select id="area-interesse" name="area-interesse" required>
+                                            <option value="">Selecione...</option>
+                                            <option value="distribuicao-alimentos">Distribuição de Alimentos</option>
+                                            <option value="educacao">Educação e Capacitação</option>
+                                            <option value="saude">Apoio à Saúde</option>
+                                            <option value="administrativo">Apoio Administrativo</option>
+                                            <option value="qualquer">Qualquer área</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                                <!--Informações Adicionais-->
+                                <fieldset>
+                                    <legend>Informações Adicionais</legend>
+                                    <div class="form-group">
+                                        <label for="experiencia">Você já participou de ações voluntárias antes?</label>
+                                        <textarea id="experiencia" name="experiencia" placeholder="Conte-nos sobre sua experiência..."></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="motivacao">Por que você quer ser voluntário?</label>
+                                        <textarea id="motivacao" name="motivacao" placeholder="Compartilhe sua motivação..."></textarea>
+                                    </div>
+                                </fieldset>
+                                <button type="submit" class="btn-primary">Enviar Cadastro</button>
+                            </form>
+                            <!--Lista de Voluntários Cadastrados-->
+                            <section class="voluntarios-lista">
+                                <h2>Voluntários Cadastrados</h2>
+                                <div id="tabelaVoluntarios">
+                                    <!--Aqui a tabela será gerada automaticamente pelo JavaScript-->
+                                </div>
+                            </section>
+                        </section>
+                    </section>
+            </main>
+    <!--Footer-->
+        <footer>
+        <p>&copy; 2025 Andrew Porto. Todos os direitos reservados.</p>
+        </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>
