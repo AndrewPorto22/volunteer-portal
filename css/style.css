@@ -1,297 +1,333 @@
-:root{
-    /* == Cores == */
-    --cor-primaria: rgba(102, 126, 234, 0.8);
-    --cor-secundaria: rgba(118, 75, 162, 0.8);
-    --cor-texto-claro: #ffffff;
-    --cor-texto-escuro: #333;
-    --cor-texto-transparente: rgba(255, 255, 255, 0.808);
-    --cor-gradiente-1: #2a0eca;
-    --cor-gradiente-2: #1c03f7;
-    --cor-borda: #ccc;
-    --cor-sucesso: green;
-    --cor-fundo-claro: #f5f5f5;
-    /* == Tipografia == */
-    --font-xs: 1rem;
-    --font-sm: 1.2rem;
-    --font-md: 1.3rem;
-    --font-lg: 1.5rem;
-    --font-lg-1: 1.6rem;
-    --font-xl: 2.5rem;
-    --font-xl: 3.5rem;
-    --font-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* == Espaçamento == */
-    --esp-3n: -3px;
-    --esp-0: 0px;
-    --esp-1: 1px;
-    --esp-2: 2px;
-    --esp-3: 3px;
-    --esp-4: 4px;
-    --esp-6: 6px;
-    --esp-8: 8px; /* (Útil para 0.5rem se 1rem=16px) */
-    --esp-10: 10px;
-    --esp-12: 12px;
-    --esp-15: 15px;
-    --esp-16: 16px; /* (Útil para 1rem) */
-    --esp-25: 25px;
-    --esp-24: 24px; /* (Útil para 1.5rem) */
-    --esp-32: 32px; /* (Útil para 2rem) */
-    --esp-40: 40px;
-    --esp-48: 48px; /* (Útil para 3rem) */
-    --esp-64: 64px; /* (Útil para 4rem) */
-    --esp-70: 50px;
-    --esp-128: 128px; /* (Útil para 8rem) */
-    --esp-200: 200px;
-    --esp-250: 250px;
-    --esp-800: 800px;
-    --esp-1200: 1200px
-    
-
+:root {
+  /* == Cores == */
+  --cor-primaria: rgba(102, 126, 234, 0.8);
+  --cor-secundaria: rgba(118, 75, 162, 0.8);
+  --cor-texto-claro: #ffffff;
+  --cor-texto-escuro: #333;
+  --cor-texto-transparente: rgba(255, 255, 255, 0.808);
+  --cor-gradiente-1: #2a0eca;
+  --cor-gradiente-2: #1c03f7;
+  --cor-borda: #ccc;
+  --cor-sucesso: green;
+  --cor-fundo-claro: #f5f5f5;
+  /* == Tipografia == */
+  --font-xs: 1rem;
+  --font-sm: 1.2rem;
+  --font-md: 1.3rem;
+  --font-lg: 1.5rem;
+  --font-lg-1: 1.6rem;
+  --font-xl: 3.5rem;
+  --font-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* == Espaçamento == */
+  --esp-3n: -3px;
+  --esp-0: 0px;
+  --esp-1: 1px;
+  --esp-2: 2px;
+  --esp-3: 3px;
+  --esp-4: 4px;
+  --esp-6: 6px;
+  --esp-8: 8px; /* (Útil para 0.5rem se 1rem=16px) */
+  --esp-10: 10px;
+  --esp-12: 12px;
+  --esp-15: 15px;
+  --esp-16: 16px; /* (Útil para 1rem) */
+  --esp-24: 24px; /* (Útil para 1.5rem) */
+  --esp-25: 25px;
+  --esp-32: 32px; /* (Útil para 2rem) */
+  --esp-40: 40px;
+  --esp-48: 48px; /* (Útil para 3rem) */
+  --esp-64: 64px; /* (Útil para 4rem) */
+  --esp-70: 50px;
+  --esp-128: 128px; /* (Útil para 8rem) */
+  --esp-200: 200px;
+  --esp-250: 250px;
+  --esp-800: 800px;
+  --esp-1200: 1200px;
 }
 
 * {
-    margin: var(--esp-0);
-    padding: var(--esp-0);
-    box-sizing: border-box;
+  margin: var(--esp-0);
+  padding: var(--esp-0);
+  box-sizing: border-box;
 }
-
 
 body {
-    font-family: var(--font-base);
-    line-height: var(--font-lg-1);
-    color: var(--cor-texto-escuro);
+  font-family: var(--font-base);
+  line-height: var(--font-lg-1);
+  color: var(--cor-texto-escuro);
 }
 
- main > section {
-    display: none;
+main > section {
+  display: none;
 }
 
 /* ==========================
    Header e Navegação
    ========================== */
 header {
-    background: linear-gradient(135deg, var(--cor-gradiente-1) 0%, var(--cor-gradiente-2) 100%);
-    color: var(--cor-texto-claro);
-    padding: var(--esp-16) var(--esp-0);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: var(--esp-0) var(--esp-2) var(--esp-10) rgba(0,0,0,0.1);
+  background: linear-gradient(
+    135deg,
+    var(--cor-gradiente-1) 0%,
+    var(--cor-gradiente-2) 100%
+  );
+  color: var(--cor-texto-claro);
+  padding: var(--esp-16) var(--esp-0);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--esp-0) var(--esp-2) var(--esp-10) rgba(0, 0, 0, 0.1);
 }
-
 
 nav {
-    max-width: var(--esp-1200);
-    margin: var(--esp-0) auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--esp-0) var(--esp-32);
+  max-width: var(--esp-1200);
+  margin: var(--esp-0) auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--esp-0) var(--esp-32);
 }
-
 
 .logo {
-    font-size: var(--font-lg);
-    font-weight: bold;
+  font-size: var(--font-lg);
+  font-weight: bold;
 }
-
 
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: var(--esp-32);
+  display: flex;
+  list-style: none;
+  gap: var(--esp-32);
 }
-
 
 nav a {
-    color: var(--cor-texto-transparente);
-    text-decoration: none;
-    transition: opacity 0.3s;
-    font-weight: 500;
+  color: var(--cor-texto-transparente);
+  text-decoration: none;
+  transition: opacity 0.3s;
+  font-weight: 500;
 }
-
 
 nav a:hover,
 nav a.active {
-    opacity: 1;
-    font-weight: bold;
+  opacity: 1;
+  font-weight: bold;
 }
-
 
 nav a {
-    opacity: 0.8;
+  opacity: 0.8;
 }
-
 
 /* ==========================
    Hero Section - Index
    ========================== */
 .hero {
-    background: linear-gradient(var(--cor-secundaria),var(--cor-secundaria) ),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/></svg>');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--cor-texto-claro);
-    margin-top: var(--esp-70);
+  background: linear-gradient(var(--cor-secundaria), var(--cor-secundaria)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/></svg>');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--cor-texto-claro);
+  margin-top: var(--esp-70);
 }
-
 
 .hero-page {
-    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
-    padding: var(--esp-128) var(--esp-32) var(--esp-64);
-    text-align: center;
-    color: var(--cor-texto-claro);
-    margin-top: var(--esp-64);
+  background: linear-gradient(
+    135deg,
+    var(--cor-primaria) 0%,
+    var(--cor-secundaria) 100%
+  );
+  padding: var(--esp-128) var(--esp-32) var(--esp-64);
+  text-align: center;
+  color: var(--cor-texto-claro);
+  margin-top: var(--esp-64);
 }
 
-
-.hero-content, .signup-section {
-    max-width: var(--esp-800);
-    margin: var(--esp-0) auto;
-    padding: var(--esp-32);
-    animation: fadeInUp 1s ease-out;
+.hero-content,
+.signup-section {
+  max-width: var(--esp-800);
+  margin: var(--esp-0) auto;
+  padding: var(--esp-32);
+  animation: fadeInUp 1s ease-out;
 }
 
+.impact-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--esp-24);
+}
 
 .hero h1,
 .hero-page h1 {
-    font-size: var(--font-xl);
-    margin-bottom: var(--esp-16);
-    text-shadow: var(--esp-2) var(--esp-2) var(--esp-4) rgba(0,0,0,0.3);
+  font-size: var(--font-xl);
+  margin-bottom: var(--esp-16);
+  text-shadow: var(--esp-2) var(--esp-2) var(--esp-4) rgba(0, 0, 0, 0.3);
 }
-
 
 .hero p,
 .hero-page p {
-    font-size: var(--font-md);
-    margin-bottom: var(--esp-32);
+  font-size: var(--font-md);
+  margin-bottom: var(--esp-32);
 }
-
-
 
 .cta-buttons {
-    display: flex;
-    flex-direction: row; /* lado a lado */
-    gap: var(--esp-24); /* espaço entre os botões */
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center;
-    flex-wrap: wrap; /* quebra em telas pequenas */
-    margin-top: var(--esp-32);
+  display: flex;
+  flex-direction: row; /* lado a lado */
+  gap: var(--esp-24); /* espaço entre os botões */
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;
+  flex-wrap: wrap; /* quebra em telas pequenas */
+  margin-top: var(--esp-32);
 }
 
-
-.btn-primary, .btn-secondary {
-    flex: 1 1 var(--esp-200); 
-    max-width: var(--esp-250); 
-    padding: var(--esp-16) var(--esp-40); 
-    font-size: var(--font-sm);
-    font-weight: bold;
-    border-radius: var(--esp-48);
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 var(--esp-4) var(--esp-15) rgba(0,0,0,0.2);
-    position: relative;
-    overflow: hidden;
-    text-align: center;
+.btn-primary,
+.btn-secondary {
+  flex: 1 1 var(--esp-200);
+  max-width: var(--esp-250);
+  padding: var(--esp-16) var(--esp-40);
+  font-size: var(--font-sm);
+  font-weight: bold;
+  border-radius: var(--esp-48);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 var(--esp-4) var(--esp-15) rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
 }
-
 
 .btn-primary {
-    background: var(--cor-primaria);
-    color: var(--cor-texto-claro);
+  background: var(--cor-primaria);
+  color: var(--cor-texto-claro);
 }
-
 
 .btn-secondary {
-    background: var(--cor-secundaria);
-    color: var(--cor-texto-claro);
+  background: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
 }
 
-
-.btn-primary:hover, .btn-secondary:hover {
-    transform: translateY(var(--esp-3n)) scale(1.05);
-    box-shadow: var(--esp-0) var(--esp-10) var(--esp-25) rgba(0,0,0,0.3);
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(var(--esp-3n)) scale(1.05);
+  box-shadow: var(--esp-0) var(--esp-10) var(--esp-25) rgba(0, 0, 0, 0.3);
 }
 
-
-.btn-primary::after, .btn-secondary::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: rgba(255,255,255,0.15);
-    transform: rotate(45deg);
-    transition: all 0.5s ease;
+.btn-primary::after,
+.btn-secondary::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
 }
 
-
-.btn-primary:hover::after, .btn-secondary:hover::after {
-    top: -20%;
-    left: -20%;
+.btn-primary:hover::after,
+.btn-secondary:hover::after {
+  top: -20%;
+  left: -20%;
 }
-
-
 
 form fieldset {
-    border: var(--esp-1) solid var(--cor-borda);
-    border-radius: var(--esp-8);
-    padding: var(--esp-24);
-    margin-bottom: var(--esp-24);
+  border: var(--esp-1) solid var(--cor-borda);
+  border-radius: var(--esp-8);
+  padding: var(--esp-24);
+  margin-bottom: var(--esp-24);
 }
-
 
 form legend {
-    font-weight: bold;
-    padding: var(--esp-0) var(--esp-8);
+  font-weight: bold;
+  padding: var(--esp-0) var(--esp-8);
 }
-
 
 .form-group {
-    margin-bottom: var(--esp-16);
+  margin-bottom: var(--esp-16);
 }
-
 
 .form-group label {
-    display: block;
-    margin-bottom: var(--esp-8);
-    font-weight: 500;
+  display: block;
+  margin-bottom: var(--esp-8);
+  font-weight: 500;
 }
-
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-    width: 100%;
-    padding: var(--esp-12) var(--esp-16);
-    border-radius: var(--esp-6);
-    border: var(--esp-1) solid var(--cor-borda);
-    font-size: var(--font-xs);
+  width: 100%;
+  padding: var(--esp-12) var(--esp-16);
+  border-radius: var(--esp-6);
+  border: var(--esp-1) solid var(--cor-borda);
+  font-size: var(--font-xs);
 }
-
 
 .success-message {
-    display: none; 
-    margin-bottom: var(--esp-8);
-    color: var(--cor-sucesso);
-    font-weight: bold;
-    text-align: center;
+  display: none;
+  margin-bottom: var(--esp-8);
+  color: var(--cor-sucesso);
+  font-weight: bold;
+  text-align: center;
 }
-
 
 footer {
-    text-align: center;
-    padding: var(--esp-32); margin-top: var(--esp-48);
-    background: var(--cor-fundo-claro);
-    margin-top: var(--esp-48);
+  text-align: center;
+  padding: var(--esp-32);
+  margin-top: var(--esp-48);
+  background: var(--cor-fundo-claro);
 }
 
+/* ==========================
+   Breakpoints Responsivos (Issue #4)
+   ========================== */
 
+/* Breakpoint 1: Portáteis (ex: < 1200px) */
+/* (O layout de 3 colunas ainda funciona bem) */
 
+/* Breakpoint 2: Tablet Horizontal (ex: < 1024px) */
+@media (max-width: 1024px) {
+  .impact-cards {
+    grid-template-columns: 1fr 1fr; /* MUDAMOS PARA 2 COLUNAS */
+  }
+}
+
+/* Breakpoint 3: Tablet Vertical / Telemóvel Horizontal (ex: < 768px) */
+@media (max-width: 768px) {
+  .impact-cards {
+    grid-template-columns: 1fr; /* MUDAMOS PARA 1 COLUNA */
+  }
+}
+
+/* Breakpoint 4: Telemóvel Pequeno (ex: < 480px) */
+/* O layout já é de 1 coluna, mas vamos tornar o título principal mais pequeno */
+@media (max-width: 480px) {
+  .hero h1,
+  .hero-page h1 {
+    font-size: var(--font-lg-1); /* 1.6rem (fica mais legível) */
+  }
+}
+
+/* Breakpoint 5: Ecrãs Muito Grandes (ex: > 1400px) */
+/* Vamos alargar o conteúdo para ecrãs gigantes */
+@media (min-width: 1400px) {
+  nav,
+  .hero-content,
+  .signup-section {
+    max-width: 1400px; /* Alarga o conteúdo (em vez dos 1200px/800px) */
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(var(--esp-16));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(var(--esp-0));
+  }
+}
