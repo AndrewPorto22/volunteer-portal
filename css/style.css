@@ -16,6 +16,7 @@
     --font-md: 1.3rem;
     --font-lg: 1.5rem;
     --font-lg-1: 1.6rem;
+    --font-xl: 2.5rem;
     --font-xl: 3.5rem;
     --font-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* == Espaçamento == */
@@ -37,7 +38,7 @@
     --esp-40: 40px;
     --esp-48: 48px; /* (Útil para 3rem) */
     --esp-64: 64px; /* (Útil para 4rem) */
-    --esp-70: 70px;
+    --esp-70: 50px;
     --esp-128: 128px; /* (Útil para 8rem) */
     --esp-200: 200px;
     --esp-250: 250px;
