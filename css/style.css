@@ -144,7 +144,7 @@ body {
   background-color: var(--cor-fundo-claro);
 }
 
-main > div {
+main > section {
   display: none;
 
   padding-top: var(--header-height);
@@ -225,7 +225,7 @@ nav a.active {
   font-weight: bold;
 }
 
-/* ========================== Hero Div - Index ========================== */
+/* ========================== Hero Section - Index ========================== */
 
 .hero {
   background: linear-gradient(
@@ -261,20 +261,20 @@ Ajuste de Padding do Hero-Cadastro
 
 /* Aplica a altura 100vh APENAS no hero da #home */
 
-div#home .hero {
+section#home .hero {
   height: 100vh;
 }
 
 /* Adiciona um padding para os outros heroes */
 
-div#projetos .hero {
+section#projetos .hero {
   padding: var(--esp-64) 0;
 }
 
 /* Regras partilhadas */
 
 .hero-content,
-.signup-div {
+.signup-section {
   max-width: var(--esp-800);
 
   margin: var(--esp-0) auto;
@@ -306,12 +306,28 @@ div#projetos .hero {
   margin-bottom: var(--esp-32);
 }
 
-/* ==========================
+/* ========================== Estilo para as imagens  ========================== */
+picture.hero-image {
+  /* Move a classe hero-image para a tag picture */
+  display: block; /* Garante que o container ocupe a largura total */
+  width: 100%;
+  max-width: 500px; /* Limita o tamanho do container */
+  height: auto;
+  margin: var(--esp-32) auto 0 auto; /* Centraliza horizontalmente e adiciona margem superior */
+  border-radius: var(--esp-8);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid var(--cor-texto-claro);
+}
 
-Seção About (Home)
+/* Garante que a imagem interna preencha o container <picture> */
+picture.hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--esp-8); /* Aplica a borda na imagem interna */
+}
 
-========================== */
-
+/* ========================== Seção About (Home)  ========================== */
 .about {
   /* Adiciona um fundo para destacar a seção */
 
@@ -358,11 +374,7 @@ Seção About (Home)
 
 /* Garante que os cards fiquem centralizados */
 
-/* ==========================
-
-Cards de Impacto (Home)
-
-========================== */
+/* ========================== Cards de Impacto (Home) ========================== */
 
 .impact-cards {
   display: grid;
@@ -454,13 +466,7 @@ Cards de Impacto (Home)
   margin-bottom: 0; /* Remove margem inferior */
 }
 
-/* ==========================
-
-Responsividade dos Cards
-
-(Já deve existir no seu CSS, apenas confirme)
-
-========================== */
+/* ========================== Responsividade dos Cards  ========================== */
 
 @media (max-width: 1024px) {
   .impact-cards {
@@ -474,11 +480,7 @@ Responsividade dos Cards
   }
 }
 
-/* ==========================
-
-Seção Contato (Lado a Lado)
-
-========================== */
+/* ========================== Seção Contato (Lado a Lado) ========================== */
 
 /* Remove o padding padrão da seção */
 
@@ -534,11 +536,7 @@ Seção Contato (Lado a Lado)
   margin-bottom: var(--esp-8);
 }
 
-/* ==========================
-
-Seção CTA (Lado a Lado)
-
-========================== */
+/* ========================== Seção CTA (Lado a Lado) ========================== */
 
 .cta {
   background: var(--cor-input-fundo-X); /* Dá um leve destaque */
@@ -831,12 +829,12 @@ footer {
 @media (min-width: 1400px) {
   nav,
   .hero-content,
-  .signup-div {
+  .signup-section {
     max-width: 1400px;
   }
 }
 
-/* ========================== Tabela de Voluntários (NOVO DESIGN) ========================== */
+/* ========================== Tabela de Voluntários ========================== */
 
 /* rolagem vertical (max-height) e horizontal (overflow: auto). */
 
@@ -1002,7 +1000,7 @@ footer {
 
   nav,
   .hero-content,
-  .signup-div {
+  .signup-section {
     max-width: 1500px;
   }
 }
@@ -1037,13 +1035,13 @@ footer {
 
 /* Correção da Altura do Hero da Home */
 
-div#home {
+section#home {
   /* Remove o padding-top APENAS da seção home */
 
   padding-top: 0;
 }
 
-div#home .hero {
+section#home .hero {
   /* Garante que ele ocupe 100% da tela */
 
   height: 100vh;
