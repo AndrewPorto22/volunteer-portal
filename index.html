@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ptbr">
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,7 +28,7 @@
     </header>
     <main>
       <!--Home-->
-      <section id="home">
+      <div id="home">
         <!-- Hero Section -->
         <section class="hero">
           <div class="hero-content">
@@ -91,13 +91,13 @@
             </div>
           </div>
         </section>
-      </section>
+      </div>
       <!--Projects-->
-      <section id="projetos">
+      <div id="projetos">
         <!--Hero Section-->
         <section class="hero">
           <div class="hero-content">
-            <h1>Nossos Projetos de Voluntariado</h1>
+            <h2>Nossos Projetos de Voluntariado</h2>
             <p>
               Descubra como nossas ações transformam vidas e como você pode
               fazer parte dessa corrente do bem.
@@ -133,12 +133,12 @@
             </p>
           </address>
         </section>
-      </section>
+      </div>
       <!--Register-->
-      <section id="cadastro">
+      <div id="cadastro">
         <section class="hero hero-cadastro">
           <div class="hero-content">
-            <h1>Cadastre-se como Voluntário</h1>
+            <h2>Cadastre-se como Voluntário</h2>
             <p>
               Junte-se a nós e faça a diferença na vida de muitas pessoas
               através do voluntariado.
@@ -198,12 +198,12 @@
             <fieldset>
               <legend>Endereço</legend>
               <div class="form-group">
-                <label for="Endereço">Endereço *</label>
+                <label for="endereco">Endereço *</label>
                 <input
                   type="text"
                   id="endereco"
                   name="endereco"
-                  autocomplete="street-address"
+                  autocomplete="address-line1"
                 />
               </div>
               <div class="form-group">
@@ -238,6 +238,8 @@
                   required
                 />
               </div>
+            </fieldset>
+            <fieldset>
               <legend>Disponibilidade</legend>
               <div class="form-group">
                 <label for="disponibilidade">Quando você pode ajudar? *</label>
@@ -295,12 +297,12 @@
             </div>
           </section>
         </section>
-      </section>
+      </div>
     </main>
     <!--Footer-->
     <footer>
       <p>&copy; 2025 Andrew Porto. Todos os direitos reservados.</p>
     </footer>
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
