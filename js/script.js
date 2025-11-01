@@ -30,26 +30,10 @@ function toggleMenu() {
   menu.classList.toggle("active");
 }
 
-// ==================== Scroll Suave ====================
-function scrollToSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  if (!section) return;
-
-  const headerHeight = 70; // altura do header fixa
-  const sectionPosition = section.offsetTop - headerHeight;
-
-  window.scrollTo({ top: sectionPosition, behavior: "smooth" });
-
-  // Fecha o menu mobile após clicar
-  const menu = document.getElementById("navMenu");
-  menu.classList.remove("active");
-}
-
 // ==================== Cadastro ====================
 function handleSubmit(event) {
-  event.preventDefault();
   const form = document.getElementById("volunteerForm");
-
+  event.preventDefault();
   const nome = form.nome.value.trim();
   const email = form.email.value.trim();
   const cpf = form.cpf.value.trim();
@@ -124,9 +108,9 @@ function exibirVoluntarios() {
     return;
   }
 
-  let html = '<table border="1" cellpadding="5" cellspacing="0">';
+  let html = "<table>";
   html +=
-    "<tr><th>Nome</th><th>Email</th><th>cpf</th><th>telefone</th><th>nascimento</th><th>endereco</th><th>cep</th><th>cidade</th><th>estado</th><th>Disponibilidade</th><th>Área de Interesse</th><th>Data Cadastro</th></tr>";
+    "<tr><th>Nome</th><th>Email</th><th>CPF</th><th>Telefone</th><th>Nascimento</th><th>Endereço</th><th>CEP</th><th>Cidade</th><th>Estado</th><th>Disponibilidade</th><th>Área de Interesse</th><th>Data Cadastro</th></tr>";
 
   voluntarios.forEach((v) => {
     html += `<tr>
@@ -184,6 +168,27 @@ document.addEventListener("DOMContentLoaded", () => {
     btnCloseModal.addEventListener("click", () => {
       const successModal = document.getElementById("sucessModal");
       successModal.style.display = "none";
+    });
+  }
+  if (darkModeToggle) {
+    // 1. Verifica no carregamento da página
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+      darkModeToggle.textContent = "☀️"; // Atualiza o ícone
+    }
+
+    // 2. Adiciona o listener
+    darkModeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+      // 3. Salva a escolha no localStorage
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        darkModeToggle.textContent = "☀️"; // Atualiza o ícone
+      } else {
+        localStorage.setItem("theme", "light");
+        darkModeToggle.textContent = "🌙"; // Atualiza o ícone
+      }
     });
   }
 });
