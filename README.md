@@ -26,11 +26,5 @@ Este projeto simula uma aplicação moderna (SPA - Single Page Application) comp
 * **Componente Modal:** Implementado modal de sucesso (feedback) com lógica de *auto-esconder* e botão de fecho manual (cumprindo o requisito de Componentes de Feedback).
 * **Layout:** Layout responsivo implementado com **CSS Grid** (`.impact-cards`) e **5 Breakpoints** funcionais (`@media ...`).
 
-## III. Instruções para o Revisor
-
-1.  **Clone o repositório:** `git clone ...`
-2.  **Execute:** Abra o arquivo `index.html` no seu navegador (Chrome/Firefox).
-3.  **Teste o Dark Mode:** O botão 🌙 no canto superior esquerdo alterna o tema (que usa a paleta de cores acessível do Dark Mode).
-
 ***
 *Entrega elaborada por Andrew Porto da Costa (01/11/2025).*
