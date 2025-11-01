@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ONG</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -104,8 +104,10 @@
 
                         <section class="signup-section">
                             <h2>Cadastro de Voluntários</h2>
-                            <div class="success-message" id="successMessage">
-                                ✅ Cadastro realizado com sucesso! Entraremos em contato em breve.
+                            <div id="sucessModal" class="modal-overlay">
+                                <h2>Sucesso! 🚀</h2>
+                                <p>O seu cadastro foi enviado. Entraremos em contacto em breve!</p>
+                                <button id="closeModalButton">Fechar</button>
                             </div>
                             <form id="volunteerForm" onsubmit="handleSubmit(event)">
                                 <!--Dados Pessoais-->
