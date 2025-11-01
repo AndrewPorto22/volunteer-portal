@@ -1,0 +1,1070 @@
+:root {
+  /* ========================== Tema de Cores ========================== */
+
+  --cor-tema-primaria: #0d9488;
+
+  --cor-tema-secundaria: #0f766e;
+
+  --cor-botao-primario: #0d9488;
+
+  --cor-botao-secundario: #0f766e;
+
+  --cor-fundo-claro: #0d94897c;
+
+  --cor-texto-claro: #ffffff;
+
+  --cor-texto-escuro: #0f172a;
+
+  --cor-texto-transparente: rgba(255, 255, 255, 0.85);
+
+  --cor-input-texto: #0f172a;
+
+  --cor-borda: #cbd5e1;
+
+  --cor-sucesso: #10b981;
+
+  --cor-input-fundo: #ffffff;
+
+  --cor-input-fundo-X: #ffffff5d;
+
+  --cor-input-texto: #0f172a;
+
+  --header-height: var(--esp-70);
+
+  /* == Tipografia == */
+
+  --font-xs: 1rem;
+
+  --font-sm: 1.2rem;
+
+  --font-md: 1.3rem;
+
+  --font-lg: 1.5rem;
+
+  --font-lg-1: 1.6rem;
+
+  --font-xl: 3.5rem;
+
+  --font-base: "Inter", sans-serif;
+
+  /* == Espaçamento == */
+
+  --esp-3n: -3px;
+
+  --esp-0: 0px;
+
+  --esp-1: 1px;
+
+  --esp-2: 2px;
+
+  --esp-3: 3px;
+
+  --esp-4: 4px;
+
+  --esp-6: 6px;
+
+  --esp-8: 8px;
+
+  --esp-10: 10px;
+
+  --esp-12: 12px;
+
+  --esp-15: 15px;
+
+  --esp-16: 16px;
+
+  --esp-24: 24px;
+
+  --esp-25: 25px;
+
+  --esp-32: 32px;
+
+  --esp-40: 40px;
+
+  --esp-48: 48px;
+
+  --esp-64: 64px;
+
+  --esp-70: 50px;
+
+  --esp-128: 128px;
+
+  --esp-200: 200px;
+
+  --esp-250: 250px;
+
+  --esp-800: 800px;
+
+  --esp-1200: 1200px;
+}
+
+/* ========================== Dark Mode ========================== */
+
+body.dark-mode {
+  --cor-tema-primaria: #1e3a8a;
+
+  --cor-tema-secundaria: #1e40af;
+
+  --cor-botao-primario: #3b82f6;
+
+  --cor-botao-secundario: #2563eb;
+
+  --cor-fundo-claro: #0f172a;
+
+  --cor-texto-claro: #ffffff;
+
+  --cor-texto-escuro: #f1f5f9;
+
+  --cor-texto-transparente: rgba(241, 245, 249, 0.85);
+
+  --cor-borda: #334155;
+
+  --cor-sucesso: #34d399;
+
+  --cor-input-fundo: #334155;
+
+  --cor-input-texto: #f1f5f9;
+}
+
+* {
+  margin: var(--esp-0);
+
+  padding: var(--esp-0);
+
+  box-sizing: border-box;
+}
+
+/* O "INTERRUPTOR" DO DARK MODE */
+
+body {
+  font-family: var(--font-base);
+
+  color: var(--cor-texto-escuro);
+
+  background-color: var(--cor-fundo-claro);
+}
+
+main > section {
+  display: none;
+
+  padding-top: var(--header-height);
+}
+
+/* ==========================
+
+Header e Navegação
+
+========================== */
+
+header {
+  background: var(--cor-tema-primaria);
+
+  color: var(--cor-texto-claro);
+
+  padding: var(--esp-16) var(--esp-0);
+
+  position: fixed;
+
+  width: 100%;
+
+  top: 0;
+
+  z-index: 1000;
+
+  box-shadow: var(--esp-0) var(--esp-2) var(--esp-10) rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  max-width: var(--esp-1200);
+
+  margin: var(--esp-0) auto;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: var(--esp-0) var(--esp-32);
+}
+
+.logo {
+  font-size: var(--font-lg);
+
+  font-weight: bold;
+
+  color: var(--cor-texto-claro);
+
+  text-decoration: none;
+
+  padding-left: 20%;
+}
+
+nav ul {
+  display: flex;
+
+  list-style: none;
+
+  gap: var(--esp-32);
+}
+
+nav a {
+  color: var(--cor-texto-transparente);
+
+  text-decoration: none;
+
+  transition: opacity 0.3s;
+
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a.active {
+  opacity: 1;
+
+  font-weight: bold;
+}
+
+/* ========================== Hero Section - Index ========================== */
+
+.hero {
+  background: linear-gradient(
+      var(--cor-tema-primaria),
+      var(--cor-tema-secundaria)
+    ),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/></svg>');
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: var(--cor-texto-claro);
+}
+
+/* ==========================
+
+Ajuste de Padding do Hero-Cadastro
+
+========================== */
+
+.hero-cadastro {
+  padding: var(--esp-128) var(--esp-32) var(--esp-64);
+}
+
+/* Aplica a altura 100vh APENAS no hero da #home */
+
+section#home .hero {
+  height: 100vh;
+}
+
+/* Adiciona um padding para os outros heroes */
+
+section#projetos .hero {
+  padding: var(--esp-64) 0;
+}
+
+/* Regras partilhadas */
+
+.hero-content,
+.signup-section {
+  max-width: var(--esp-800);
+
+  margin: var(--esp-0) auto;
+
+  padding: var(--esp-32);
+
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Regra específica do Hero */
+
+.hero-content {
+  width: 100%;
+}
+
+/* APLICA ESTILOS AO H1 E P DO .hero-cadastro */
+
+.hero h1,
+.hero-cadastro h1 {
+  font-size: var(--font-xl);
+
+  margin-bottom: var(--esp-16);
+}
+
+.hero p,
+.hero-cadastro p {
+  font-size: var(--font-md);
+
+  margin-bottom: var(--esp-32);
+}
+
+/* ========================== Estilo para as imagens  ========================== */
+picture.hero-image {
+  /* Move a classe hero-image para a tag picture */
+  display: block; /* Garante que o container ocupe a largura total */
+  width: 100%;
+  max-width: 500px; /* Limita o tamanho do container */
+  height: auto;
+  margin: var(--esp-32) auto 0 auto; /* Centraliza horizontalmente e adiciona margem superior */
+  border-radius: var(--esp-8);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid var(--cor-texto-claro);
+}
+
+/* Garante que a imagem interna preencha o container <picture> */
+picture.hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--esp-8); /* Aplica a borda na imagem interna */
+}
+
+/* ========================== Seção About (Home)  ========================== */
+.about {
+  /* Adiciona um fundo para destacar a seção */
+
+  background: var(--cor-input-fundo);
+
+  padding: var(--esp-48) var(--esp-32);
+
+  border-top: 1px solid var(--cor-borda);
+
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+/* NOVO: Container Flex para os textos */
+
+/* Modifique esta regra */
+
+.about-text-container {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: var(--esp-32);
+
+  max-width: var(--esp-1200);
+
+  /* Altere a 'margin' para APENAS centralizar */
+
+  margin: 0 auto;
+}
+
+/* NOVO: Bloco de texto individual */
+
+.about-text-block {
+  flex: 1 1 400px; /* Cresce/diminui, com base de 400px */
+}
+
+/* (Opcional) Dá um destaque aos títulos da seção */
+
+.about-text-block h2 {
+  color: var(--cor-botao-primario); /* Usa a cor do botão */
+
+  margin-bottom: var(--esp-16);
+}
+
+/* Garante que os cards fiquem centralizados */
+
+/* ========================== Cards de Impacto (Home) ========================== */
+
+.impact-cards {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: var(--esp-24);
+
+  max-width: var(--esp-1200);
+
+  margin: var(--esp-64) auto 0 auto; /* <-- ESTA É A REGRA VENCEDORA */
+}
+
+/* * Estilização principal do .card individual
+
+*/
+
+.card {
+  /* Usa o fundo claro do tema (branco ou cinza-escuro) */
+
+  background: var(--cor-fundo-claro);
+
+  border: 1px solid var(--cor-borda);
+
+  border-radius: var(--esp-8);
+
+  padding: var(--esp-32);
+
+  text-align: center; /* Centraliza todo o conteúdo */
+
+  /* Sombra (Box Shadow) */
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+  /* Transição suave para o hover */
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de Hover: levanta o card */
+
+.card:hover {
+  transform: translateY(var(--esp-3n)); /* Move -3px para cima */
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do Ícone (Emoji) */
+
+.card-icon {
+  font-size: 3rem; /* Tamanho grande para o emoji */
+
+  margin-bottom: var(--esp-16);
+
+  /* (Opcional) Adiciona um círculo de fundo */
+
+  background: rgba(0, 0, 0, 0.05);
+
+  width: 80px;
+
+  height: 80px;
+
+  line-height: 80px; /* Alinha o emoji verticalmente */
+
+  border-radius: 50%;
+
+  margin: 0 auto var(--esp-16) auto; /* Centraliza o círculo */
+}
+
+/* Estilo do Título do Card (h3) */
+
+.card h3 {
+  /* Usa a cor do botão para dar destaque */
+
+  color: var(--cor-botao-primario);
+
+  font-size: var(--font-md);
+
+  margin-bottom: var(--esp-12);
+}
+
+/* Estilo do Parágrafo do Card (p) */
+
+.card p {
+  font-size: var(--font-xs);
+
+  line-height: 1.6;
+
+  margin-bottom: 0; /* Remove margem inferior */
+}
+
+/* ========================== Responsividade dos Cards  ========================== */
+
+@media (max-width: 1024px) {
+  .impact-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .impact-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================== Seção Contato (Lado a Lado) ========================== */
+
+/* Remove o padding padrão da seção */
+
+.contact {
+  padding: 0;
+}
+
+.contact h2 {
+  text-align: center;
+
+  margin-bottom: var(--esp-32);
+
+  padding: var(--esp-16) 0;
+}
+
+/* Transforma o <address> em um container flex */
+
+.contact address {
+  display: flex;
+
+  flex-wrap: wrap; /* Permite quebrar a linha em telas pequenas */
+
+  gap: var(--esp-24); /* Espaçamento entre os cards */
+
+  justify-content: center; /* Centraliza os cards */
+}
+
+/* Estiliza cada <p> como um "card" */
+
+.contact address p {
+  flex: 1 1 300px; /* Faz crescer/diminuir, com base de 300px */
+
+  padding: var(--esp-24);
+
+  /* Reutiliza o estilo dos inputs/fundo do dark mode */
+
+  background: var(--cor-input-fundo);
+
+  background-color: var(--cor-input-fundo-X);
+
+  border: 1px solid var(--cor-borda);
+
+  border-radius: var(--esp-8);
+
+  text-align: left; /* Mantém o alinhamento original */
+
+  margin-bottom: 0; /* Remove a margem padrão de <p> */
+}
+
+.contact address p strong {
+  display: block; /* Força o título (ex: "Telefone") a ter sua própria linha */
+
+  margin-bottom: var(--esp-8);
+}
+
+/* ========================== Seção CTA (Lado a Lado) ========================== */
+
+.cta {
+  background: var(--cor-input-fundo-X); /* Dá um leve destaque */
+
+  padding: var(--esp-48) 0;
+
+  border-top: 1px solid var(--cor-borda);
+
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.cta-content {
+  max-width: var(--esp-1200);
+
+  margin: 0 auto;
+
+  padding: 0 var(--esp-32); /* Adiciona padding lateral */
+
+  /* Novas regras Flex */
+
+  display: flex;
+
+  flex-wrap: wrap; /* Para o mobile */
+
+  justify-content: space-between; /* Alinha blocos nas pontas */
+
+  align-items: center; /* Alinha verticalmente */
+
+  gap: var(--esp-32);
+}
+
+.cta-text {
+  flex: 2 1 400px; /* Permite o texto crescer (flex-grow: 2) */
+}
+
+.cta-text h2 {
+  margin-bottom: var(--esp-8); /* Ajusta espaçamento */
+}
+
+.cta-text p {
+  margin-bottom: 0;
+}
+
+/* Ajusta o bloco de botões */
+
+.cta .cta-buttons {
+  flex: 1 1 300px; /* Permite os botões crescerem (flex-grow: 1) */
+
+  margin-top: 0; /* Remove a margem superior que existia */
+
+  justify-content: flex-end; /* Alinha os botões à direita */
+
+  gap: var(--esp-24); /* <-- Adiciona espaço entre eles */
+
+  white-space: nowrap;
+}
+
+/* Em telas pequenas, centraliza os botões novamente */
+
+@media (max-width: 768px) {
+  .cta .cta-buttons {
+    justify-content: center;
+  }
+}
+
+.btn-primary,
+.btn-secondary {
+  flex: 1 1 var(--esp-200);
+
+  max-width: var(--esp-250);
+
+  padding: var(--esp-16) var(--esp-40);
+
+  font-size: var(--font-sm);
+
+  font-weight: bold;
+
+  border-radius: var(--esp-8);
+
+  border: none;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 var(--esp-4) var(--esp-15) rgba(0, 0, 0, 0.2);
+
+  position: relative;
+
+  overflow: hidden;
+
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--cor-botao-primario);
+
+  color: var(--cor-texto-claro);
+}
+
+.btn-secondary {
+  background: var(--cor-botao-secundario);
+
+  color: var(--cor-texto-claro);
+}
+
+.btn-primary:hover {
+  background: var(--cor-botao-secundario); /* Inverte com o secundário */
+
+  transform: translateY(var(--esp-3n));
+
+  box-shadow: var(--esp-0) var(--esp-10) var(--esp-25) rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary:hover {
+  background: var(--cor-botao-primario); /* Inverte com o primário */
+
+  transform: translateY(var(--esp-3n));
+
+  box-shadow: var(--esp-0) var(--esp-10) var(--esp-25) rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary::after,
+.btn-secondary::after {
+  content: "";
+
+  position: absolute;
+
+  top: -50%;
+
+  left: -50%;
+
+  width: 200%;
+
+  height: 200%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  transform: rotate(45deg);
+
+  transition: all 0.5s ease;
+}
+
+.btn-primary:hover::after,
+.btn-secondary:hover::after {
+  top: -20%;
+
+  left: -20%;
+}
+
+form fieldset {
+  border: var(--esp-1) solid var(--cor-borda);
+
+  border-radius: var(--esp-8);
+
+  padding: var(--esp-24);
+
+  margin-bottom: var(--esp-24);
+}
+
+form legend {
+  font-weight: bold;
+
+  padding: var(--esp-0) var(--esp-8);
+}
+
+.form-group {
+  margin-bottom: var(--esp-16);
+}
+
+/* CORREÇÃO 7: LIGA OS LABELS AO TEMA */
+
+form label {
+  display: block;
+
+  margin-bottom: var(--esp-8);
+
+  font-weight: 500;
+
+  color: var(--cor-texto-escuro);
+}
+
+/* CORREÇÃO 8: LIGA OS INPUTS AO TEMA */
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+
+  padding: var(--esp-12) var(--esp-16);
+
+  border-radius: var(--esp-6);
+
+  border: var(--esp-1) solid var(--cor-borda);
+
+  font-size: var(--font-xs);
+
+  background-color: var(--cor-input-fundo);
+
+  color: var(--cor-input-texto);
+}
+
+.success-message {
+  display: none;
+
+  margin-bottom: var(--esp-8);
+
+  color: var(--cor-sucesso);
+
+  font-weight: bold;
+
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+
+  padding: var(--esp-32);
+
+  margin-top: var(--esp-48);
+
+  background: var(--cor-fundo-claro);
+}
+
+/* ========================== Componentes ========================== */
+
+.modal-overlay {
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: none;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 2000;
+}
+
+.modal-content {
+  background: var(--cor-fundo-claro);
+
+  padding: var(--esp-32);
+
+  border-radius: var(--esp-8);
+
+  box-shadow: 0 var(--esp-4) var(--esp-15) rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+
+  max-width: 400px;
+
+  width: 90%;
+}
+
+/* ========================== Breakpoints Responsivos ========================== */
+
+@media (max-width: 1024px) {
+  .impact-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .impact-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CORREÇÃO 9: CORRIGE O ALVO DO BREAKPOINT DE FONTE */
+
+@media (max-width: 480px) {
+  .hero h1,
+  .hero-cadastro h1 {
+    /* (O seletor estava errado, agora está certo) */
+
+    font-size: var(--font-lg-1);
+  }
+}
+
+@media (min-width: 1400px) {
+  nav,
+  .hero-content,
+  .signup-section {
+    max-width: 1400px;
+  }
+}
+
+/* ========================== Tabela de Voluntários ========================== */
+
+/* rolagem vertical (max-height) e horizontal (overflow: auto). */
+
+.voluntarios-lista {
+  width: 100%;
+
+  max-height: 600px; /* ALTURA MÁXIMA - Adiciona rolagem vertical */
+
+  overflow: auto; /* Adiciona AMBAS as rolagens (auto) */
+
+  -webkit-overflow-scrolling: touch;
+
+  /* Design com cantos arredondados */
+
+  border: 1px solid var(--cor-borda);
+
+  border-radius: var(--esp-8);
+
+  margin-top: var(--esp-32); /* Espaço acima da tabela */
+}
+
+#tabelaVoluntarios {
+  width: 100%;
+}
+
+/* Design da tabela */
+
+.voluntarios-lista table {
+  width: 100%;
+
+  min-width: 1200px; /* Força a rolagem horizontal */
+
+  border-collapse: collapse; /* Bordas limpas */
+
+  border: none;
+}
+
+/* Células e Cabeçalho */
+
+.voluntarios-lista th,
+.voluntarios-lista td {
+  padding: var(--esp-12) var(--esp-15); /* Mais espaçamento */
+
+  text-align: left;
+
+  /* Bordas apenas embaixo */
+
+  border: none;
+
+  border-bottom: 1px solid var(--cor-borda);
+
+  white-space: nowrap;
+}
+
+/* Cabeçalho (com cor do tema e "fixo" no topo) */
+
+.voluntarios-lista th {
+  background-color: var(--cor-tema-secundaria);
+
+  color: var(--cor-texto-claro);
+
+  position: sticky; /* Efeito "Cabeçalho Fixo" */
+
+  top: 0;
+
+  z-index: 10;
+}
+
+/* Linhas Pares (Efeito Zebra) */
+
+.voluntarios-lista tr:nth-child(even) {
+  /* Fundo branco no modo claro, fundo escuro no modo escuro */
+
+  background-color: var(--cor-input-fundo);
+}
+
+/* Linhas Ímpares (Efeito Zebra) */
+
+.voluntarios-lista tr:nth-child(odd) {
+  /* Fundo semi-transparente que combina com o body */
+
+  background-color: var(--cor-input-fundo-X);
+}
+
+/* Remove a borda da última linha */
+
+.voluntarios-lista tr:last-child td {
+  border-bottom: none;
+}
+
+/* ========================== Menu Mobile ========================== */
+
+.menu-toggle {
+  display: none;
+
+  background: none;
+
+  border: none;
+
+  color: var(--cor-texto-claro);
+
+  font-size: 2.2rem;
+
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Mostra o botão hamburguer */
+  }
+
+  nav ul {
+    display: none; /* Esconde o menu por padrão */
+
+    flex-direction: column;
+
+    width: 100%;
+
+    position: absolute;
+
+    top: 68px; /* Ajuste baseado na altura do seu header */
+
+    left: 0;
+
+    background: var(--cor-tema-primaria);
+
+    padding-bottom: var(--esp-16);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  nav ul.active {
+    display: flex; /* Mostra o menu ao clicar */
+  }
+
+  nav ul li {
+    text-align: center;
+
+    width: 100%;
+
+    padding: var(--esp-12) 0;
+  }
+
+  nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* ========================== Breakpoint (Telas Maiores) ========================== */
+
+@media (min-width: 1600px) {
+  :root {
+    /* Aumenta a fonte base em telas muito grandes */
+
+    --font-xs: 1.1rem;
+
+    --font-sm: 1.3rem;
+
+    --font-md: 1.4rem;
+  }
+
+  /* Aumenta o container */
+
+  nav,
+  .hero-content,
+  .signup-section {
+    max-width: 1500px;
+  }
+}
+
+#darkModeToggle {
+  background: none;
+
+  border: none;
+
+  color: var(--cor-texto-claro);
+
+  font-size: 1.8rem; /* Aumenta o tamanho do emoji */
+
+  cursor: pointer;
+
+  padding: 0 var(--esp-16) 0 0;
+
+  opacity: 0.8;
+
+  transition: opacity 0.3s;
+
+  /* Garante que ele fique alinhado com o logo */
+
+  display: flex;
+
+  align-items: center;
+}
+
+#darkModeToggle:hover {
+  opacity: 1;
+}
+
+/* Correção da Altura do Hero da Home */
+
+section#home {
+  /* Remove o padding-top APENAS da seção home */
+
+  padding-top: 0;
+}
+
+section#home .hero {
+  /* Garante que ele ocupe 100% da tela */
+
+  height: 100vh;
+}
+
+/* ========================== Acessibilidade: Foco do Teclado (WCAG) ========================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--cor-primaria);
+
+  outline-offset: 2px;
+
+  box-shadow: 0 0 0 4px var(--cor-fundo-claro), 0 0 0 6px var(--cor-primaria);
+}
+
+header button:focus-visible {
+  /* Ajuste de alto contraste para o header (fundo escuro) */
+
+  box-shadow: 0 0 0 4px var(--cor-primaria), 0 0 0 6px var(--cor-texto-claro);
+
+  outline: 1px solid transparent;
+}
